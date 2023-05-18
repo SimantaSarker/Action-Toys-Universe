@@ -148,7 +148,7 @@ const AddToys = () => {
             <input
               type="text"
               name="rating"
-              placeholder="Enter Rating "
+              placeholder="Enter Toys Rating "
               className="input input-bordered w-full"
             />
           </label>
@@ -164,8 +164,8 @@ const AddToys = () => {
           <select id="categories">
             <option defaultValue={true}>Marvel</option>
             <option value="StarWars">Star Wars</option>
-            <option value="White">Avengers</option>
             <option value="Transformers">Transformers</option>
+            <option value="Dc">DC</option>
           </select>
         </div>
         <div className="form-control md:w-1/2">
