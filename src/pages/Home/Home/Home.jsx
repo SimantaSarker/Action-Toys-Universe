@@ -1,5 +1,6 @@
 import Footer from "../../Shared/Footer/Footer";
 import Banner from "../Banner/Banner";
+import Quality from "../ExtraSections/Quality";
 import Gallery from "../Gallery/Gallery";
 
 const Home = () => {
@@ -7,7 +8,7 @@ const Home = () => {
     <div>
       <Banner></Banner>
       <Gallery></Gallery>
-      <h1>Home</h1>
+      <Quality></Quality>
       <Footer></Footer>
     </div>
   );
