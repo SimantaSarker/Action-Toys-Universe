@@ -1,3 +1,4 @@
+import Footer from "../../Shared/Footer/Footer";
 import Banner from "../Banner/Banner";
 
 const Home = () => {
@@ -5,6 +6,7 @@ const Home = () => {
     <div>
       <Banner></Banner>
       <h1>Home</h1>
+      <Footer></Footer>
     </div>
   );
 };
