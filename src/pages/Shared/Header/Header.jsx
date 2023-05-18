@@ -13,7 +13,7 @@ const Header = () => {
       .catch(() => {});
   };
   return (
-    <div className="navbar bg-base-300 z-10 sticky top-0">
+    <div className="navbar bg-base-300 z-10 sticky top-0 rounded">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -89,7 +89,7 @@ const Header = () => {
       {user ? (
         <div className="navbar-end">
           <label tabIndex={0} className=" btn-circle avatar">
-            <div className="w-10 rounded-full" title={user?.displayName}>
+            <div className="w-10 rounded-full"  title={user?.displayName}>
               <img
                 src={user?.photoURL}
                 className="object-cover"
