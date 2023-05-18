@@ -4,7 +4,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser,updateProfileAndPhoto } = useContext(AuthContext);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
@@ -35,7 +35,8 @@ const Register = () => {
         loggedUser.displayName=name;
         loggedUser.photoURL = photo;
         form.reset();
-        setSuccess("Successfully Register")
+        setSuccess("Successfully Register");
+        upDateUserData(loggedUser,name,photo)
        })
        .catch((error)=>{
         setError(error.message)
@@ -46,6 +47,14 @@ const Register = () => {
       setError("Provide Email address")
     }
   };
+
+  const upDateUserData=(user,name,photo)=>{
+    updateProfileAndPhoto(user,name,photo)
+    .then(()=>{
+      console.log("Successfully update")
+    })
+    .catch((error)=>setError(error.message))
+  }
 
   return (
     <div
