@@ -16,10 +16,18 @@ const handleAddToys=(event)=>{
   const subCategory=form.categories.value;
   const photo=form.photo.value;
   console.log(name,email,quantity,seller,price,rating,subCategory,photo);
-  const toys={
+  const toy={
     name,email,quantity,seller,price,rating,subCategory,photo
   }
-  console.log(toys)
+  fetch('http://localhost:5000/toys',{
+    method:"POST",
+    headers:{
+      "content-type":"application/json"
+    },
+    body:JSON.stringify(toy)
+  })
+  .then((res)=>res.json())
+  .then((data)=>console.log(data))
 }
   
   return (
@@ -33,6 +41,7 @@ const handleAddToys=(event)=>{
           <label className="input-group">
             <input
               type="text"
+              required
               name="name"
               placeholder="Enter Toys name "
               className="input input-bordered w-full"
@@ -47,6 +56,7 @@ const handleAddToys=(event)=>{
             <input
               type="text"
               name="quantity"
+              required
               placeholder="Enter Available Quantity "
               className="input input-bordered w-full"
             />
@@ -64,7 +74,7 @@ const handleAddToys=(event)=>{
             <input
               type="text"
               name="seller"
-              disabled
+              readOnly
               defaultValue={user?.displayName}
               placeholder="Enter seller Name "
               className="input input-bordered w-full"
@@ -79,7 +89,7 @@ const handleAddToys=(event)=>{
             <input
               type="email"
               name="email"
-              disabled
+            readOnly
               defaultValue={user?.email}
               placeholder="Enter Seller Email "
               className="input input-bordered w-full"
