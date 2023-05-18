@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
+import logo from '../../../assets/logo.svg'
 import { AuthContext } from "../../../providers/AuthProvider";
 
 const Header = () => {
@@ -46,7 +47,7 @@ const Header = () => {
               <Link to="/myToys">My Toys</Link>
             </li>
             <li>
-              <Link to="/addToys">Add a Toy</Link>
+              <Link to="/addToys">Add Toys</Link>
             </li>
 
             <li>
@@ -54,17 +55,20 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-2xl">Avengers Universe</a>
-        <div className="navbar-start">
+        <div className=" flex items-center justify-center">
           <label tabIndex={0} className=" btn-circle avatar">
-            <div className="w-24 rounded" title={user?.displayName}>
+            <div className="w-24 rounded">
               <img
-                src="https://images.unsplash.com/photo-1640499900704-b00dd6a1103a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80"
+                src={logo}
                 className="object-cover"
               />
             </div>
           </label>
+          <a className="btn btn-ghost normal-case text-2xl"> Universe</a>
+
         </div>
+     
+      
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -78,7 +82,7 @@ const Header = () => {
             <Link to="/myToys">My Toys</Link>
           </li>
           <li>
-            <Link to="/addToys">Add a Toy</Link>
+            <Link to="/addToys">Add Toys</Link>
           </li>
 
           <li>
