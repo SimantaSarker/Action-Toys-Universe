@@ -4,9 +4,8 @@ import AllToysRow from "../AddToys/AllToysRow";
 const AllToys = () => {
   const allToys=useLoaderData();
 
-  console.log(allToys)
   return (
-  <div className="overflow-x-auto my-2">
+  <div className="overflow-x-auto my-2 ">
   <table className="table w-full">
     {/* head */}
     <thead>
@@ -15,7 +14,7 @@ const AllToys = () => {
         <th>Toy Name</th>
         <th>Sub-Category</th>
         <th>Price</th>
-        <th>Available Quantity</th>
+        <th>Quantity</th>
         <th>Details</th>
        
       </tr>
