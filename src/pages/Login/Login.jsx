@@ -31,13 +31,14 @@ const Login = () => {
 
   return (
     <div className="hero min-h-screen bg-gray-400">
-      <div className="w-full flex items-center justify-center">
+      <div className="w-full flex gap-9 items-center justify-center">
         <img
           src="https://brandio.io/envato/iofrm/html/images/graphic1.svg"
           alt=""
           className=" w-[50%]"
         />
-        <form className="card-body " onSubmit={handleLogin}>
+      <div className="flex flex-col">
+      <form className="card-body " onSubmit={handleLogin}>
           <div className="form-control">
             <label className="label">
               <span className="label-text font-bold">Email</span>
@@ -90,8 +91,9 @@ const Login = () => {
               className="btn btn-primary text-xl"
             />
           </div>
-          <SocialLogin></SocialLogin>
         </form>
+          <SocialLogin></SocialLogin>
+      </div>
       </div>
     </div>
   );
