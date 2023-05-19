@@ -5,6 +5,10 @@ import MyToysCard from "./MyToysCard";
 const MyToys = () => {
   const { user } = useContext(AuthContext);
   const [myToys, setMyToys] = useState([]);
+  const [sorting, setSorting] = useState("1");
+   const email=user?.email;
+   const sortEmail={email};
+
 
   useEffect(() => {
     fetch(`  http://localhost:5000/myToys?email=${user?.email}`)
@@ -13,30 +17,75 @@ const MyToys = () => {
   }, [user]);
 
 
+
+
+
+
+
+  const handleSort = () => {
+    fetch(`http://localhost:5000/sorts/${sorting}`,{
+      method:"POST",
+      headers:{
+        "content-type":"application/json"
+      },
+      body:JSON.stringify(sortEmail)
+    })
+    .then((res)=>res.json()).then((data)=>setMyToys(data))
+
+  };
+
+  
   return (
-    <div className="overflow-x-auto mt-10 home">
-      <table className="table w-full">
-        {/* head */}
-        <thead>
-          <tr>
-            <th></th>
-            <th>Toy Name</th>
-            <th>Seller Name</th>
-            <th>Email</th>
-            <th>Sub-Category</th>
-            <th>Price</th>
-            <th>Rating</th>
-            <th>Quantity</th>
-            {/* <th>Details</th> */}
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-            { 
-            myToys.map((toy)=><MyToysCard key={toy._id} toy={toy} myToys={myToys} setMyToys={setMyToys}></MyToysCard>)
-            }
-        </tbody>
-      </table>
+    <div>
+      <div className="mx-auto">
+        <button
+          className="btn btn-circle btn-outline"
+          onClick={() => {
+            setSorting("1");
+            handleSort();
+          }}
+        >
+          ASC
+        </button>
+        <button
+          className="btn btn-circle btn-outline"
+          onClick={() => {
+            setSorting("-1");
+            handleSort();
+          }}
+        >
+          DSC
+        </button>
+      </div>
+      <div className="overflow-x-auto mt-10 home">
+        <table className="table w-full">
+          {/* head */}
+          <thead>
+            <tr>
+              <th></th>
+              <th>Toy Name</th>
+              <th>Seller Name</th>
+              <th>Email</th>
+              <th>Sub-Category</th>
+              <th>Price</th>
+              <th>Rating</th>
+              <th>Quantity</th>
+              {/* <th>Details</th> */}
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {myToys.map((toy) => (
+              <MyToysCard
+                key={toy._id}
+                toy={toy}
+                myToys={myToys}
+                setMyToys={setMyToys}
+              ></MyToysCard>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
