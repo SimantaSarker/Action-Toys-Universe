@@ -2,7 +2,6 @@ import { FiDelete } from "react-icons/fi";
 import { RxUpdate } from "react-icons/rx";
 import { Link } from "react-router-dom";
 const MyToysCard = ({toy}) => {
-  console.log(toy);
   const{email,name,photo,price,quantity,rating,seller,subCategory,_id}=toy;
 
   const handleDelete=id=>{

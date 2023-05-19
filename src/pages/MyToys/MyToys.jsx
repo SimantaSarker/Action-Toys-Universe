@@ -4,7 +4,6 @@ import MyToysCard from "./MyToysCard";
 
 const MyToys = () => {
   const { user } = useContext(AuthContext);
-  console.log(user?.email);
   const [myToys, setMyToys] = useState([]);
 
   useEffect(() => {
@@ -12,7 +11,7 @@ const MyToys = () => {
       .then((res) => res.json())
       .then((data) => setMyToys(data));
   }, [user]);
-  console.log(myToys);
+
 
   return (
     <div className="overflow-x-auto mt-10 home">

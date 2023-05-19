@@ -194,7 +194,7 @@ const AddToys = () => {
       <div>
         <input
           type="submit"
-          defaultValue="Add Coffee"
+          defaultValue="Add Toy"
           className="btn btn-block mt-5"
         />
       </div>
