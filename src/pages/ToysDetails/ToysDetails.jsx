@@ -8,7 +8,7 @@ const ToysDetails = () => {
   return (
     <div className="card lg:card-side shadow-xl  mx-auto  md:h-[70vh]   home">
       <figure className="md:w-1/2  ">
-        <img src={photo} alt="Album" className="object-cover" />
+        <img src={photo} alt="Album" className="object-cover md:w-full" />
       </figure>
       <div className="card-body md:w-1/2 hover:bg-slate-200">
         <p >Toy Name:{name}</p>
