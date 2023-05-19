@@ -14,18 +14,9 @@ const AddToys = () => {
     const email = form.email.value;
     const price = form.price.value;
     const rating = form.rating.value;
+    const details=form.details.value;
     const subCategory = form.categories.value;
     const photo = form.photo.value;
-    console.log(
-      name,
-      email,
-      quantity,
-      seller,
-      price,
-      rating,
-      subCategory,
-      photo
-    );
     const toy = {
       name,
       email,
@@ -34,6 +25,7 @@ const AddToys = () => {
       price,
       rating,
       subCategory,
+      details,
       photo,
     };
     fetch("http://localhost:5000/toys", {
@@ -60,7 +52,7 @@ const AddToys = () => {
   };
 
   return (
-    <form onSubmit={handleAddToys}>
+    <form onSubmit={handleAddToys} className="home">
       <div className="md:flex md:gap-3 mt-10">
         <div className="form-control md:w-1/2">
           <label className="label">

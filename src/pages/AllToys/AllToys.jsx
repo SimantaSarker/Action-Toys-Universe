@@ -21,10 +21,10 @@ const handleToyNameSearch=()=>{
 
 
   return (
-  <div className="overflow-x-auto my-2 ">
-    <div>
-      <input type="text"  className="text-center p-1 bg-red-400" onChange={(e)=>setSearch(e.target.value)} />
-      <button onClick={handleToyNameSearch}>Search</button>
+  <div className="overflow-x-auto mt-10 home">
+    <div className="mb-5 text-center">
+      <input type="text"  className="input input-bordered input-info w-full max-w-xs " onChange={(e)=>setSearch(e.target.value)} />
+      <button onClick={handleToyNameSearch} className="ms-6">Search</button>
     </div>
   <table className="table w-full">
     {/* head */}
