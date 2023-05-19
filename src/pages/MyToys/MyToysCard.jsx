@@ -1,12 +1,49 @@
 import { FiDelete } from "react-icons/fi";
 import { RxUpdate } from "react-icons/rx";
 import { Link } from "react-router-dom";
-const MyToysCard = ({toy}) => {
+import Swal from "sweetalert2";
+const MyToysCard = ({toy,myToys,setMyToys}) => {
   const{email,name,photo,price,quantity,rating,seller,subCategory,_id}=toy;
 
-  const handleDelete=id=>{
-    console.log(id)
+
+
+  const handleDelete=(_id)=>{
+    console.log(_id)
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/toys/${_id}`,{
+          method:"DELETE",
+       
+        })
+        .then((res)=>res.json())
+        .then((data)=>{
+          console.log(data)
+          if(data.deletedCount>0)
+          {
+            Swal.fire(
+              'Deleted!',
+              'Toy has been deleted successfully.',
+              'success'
+            )
+            const remaining=myToys.filter(toy=>toy._id!==_id);
+            setMyToys(remaining)
+          }
+        })
+      }
+    })
+
   }
+
+
+
   return (
     <tr>
         <td>
