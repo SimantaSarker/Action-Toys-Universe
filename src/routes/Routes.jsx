@@ -11,6 +11,7 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Login/Register";
 import PrivateRoutes from "./PrivateRoutes";
 import ToysDetails from "../pages/ToysDetails/ToysDetails";
+import UpdateMyToys from "../pages/MyToys/UpdateMyToys";
 
 const router = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
       {
         path:"register",
         element:<Register></Register>
+      },
+      {
+        path:'/update/:id',
+        element:<UpdateMyToys></UpdateMyToys>
       },
       {
         path:"toys/:id",

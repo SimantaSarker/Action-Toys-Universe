@@ -1,6 +1,13 @@
+import { FiDelete } from "react-icons/fi";
+import { RxUpdate } from "react-icons/rx";
+import { Link } from "react-router-dom";
 const MyToysCard = ({toy}) => {
   console.log(toy);
-  const{details,email,name,photo,price,quantity,rating,seller,subCategory}=toy
+  const{email,name,photo,price,quantity,rating,seller,subCategory,_id}=toy;
+
+  const handleDelete=id=>{
+    console.log(id)
+  }
   return (
     <tr>
         <td>
@@ -22,9 +29,21 @@ const MyToysCard = ({toy}) => {
         <td>{rating}</td>
         <td>{quantity}</td>
         {/* <td className="overflow-hidde">{details}</td> */}
-        <th>
-          <button className="btn btn-ghost btn-xs">details</button>
-        </th>
+        <td>
+              <div className="w-12 h-12  flex items-center">
+                <button
+                  className="btn btn-outline bg-gray-200 btn-xs  w-full"
+                  onClick={() => handleDelete(_id)}
+                >
+                  <FiDelete></FiDelete>
+                </button>
+                <Link to={`/update/${_id}`}>
+                  <button className="btn btn-outline bg-gray-200 btn-xs w-full ml-3">
+                    <RxUpdate></RxUpdate>
+                  </button>
+                </Link>
+              </div>
+            </td>
       </tr>
   );
 };

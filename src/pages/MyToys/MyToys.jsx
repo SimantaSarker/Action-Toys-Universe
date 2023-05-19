@@ -20,7 +20,7 @@ const MyToys = () => {
         {/* head */}
         <thead>
           <tr>
-            <th>Toy Image</th>
+            <th></th>
             <th>Toy Name</th>
             <th>Seller Name</th>
             <th>Email</th>
