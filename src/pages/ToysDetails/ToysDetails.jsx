@@ -5,7 +5,7 @@ import useTitle from "../../hooks/useTitle";
 const ToysDetails = () => {
   const toyDetails = useLoaderData();
   const {details,email,name,photo,price,quantity,rating,seller}=toyDetails
-  useTitle("ToyDetails")
+  useTitle("Action Universe | ToyDetails")
 
   return (
     <div className="card lg:card-side shadow-xl  mx-auto  md:h-[70vh]   home">

@@ -13,7 +13,7 @@ const Login = () => {
   const location=useLocation();
   const from=location.state?.from?.pathname || "/";
 
-  useTitle("Login")
+  useTitle("Action Universe | Login")
 
   const handleLogin = (event) => {
     setError("");

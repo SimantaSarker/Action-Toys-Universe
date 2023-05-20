@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 const AllToys = () => {
   const [allToys, setAllToys] = useState([]);
   const [search, setSearch] = useState("");
-  useTitle("AllToys");
+  useTitle("Action Universe | AllToys");
 
   useEffect(() => {
     fetch("https://assignment-11-server-lilac.vercel.app/toys")

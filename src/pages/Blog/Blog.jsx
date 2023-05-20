@@ -1,7 +1,7 @@
 import useTitle from "../../hooks/useTitle";
 
 const Blog = () => {
-  useTitle("Blog")
+  useTitle("Action Universe | Blog")
   return (
     <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-10 mx-auto p-9">
       <div className="card  bg-base-300 shadow-xl" data-aos="fade-up-right"  data-aos-easing="linear"

@@ -9,7 +9,7 @@ const MyToys = () => {
   // const [sorting, setSorting] = useState("");
   const email = user?.email;
   const sortEmail = { email };
-  useTitle("MyToys");
+  useTitle("Action Universe | MyToys");
 
   useEffect(() => {
     fetch(

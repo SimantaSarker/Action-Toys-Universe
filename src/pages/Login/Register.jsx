@@ -8,7 +8,7 @@ const Register = () => {
   const { createUser, updateProfileAndPhoto } = useContext(AuthContext);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
-  useTitle("Register")
+  useTitle("Action Universe | Register")
 
   const handleRegister = (event) => {
     setError("");
