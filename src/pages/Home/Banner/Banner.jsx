@@ -2,8 +2,10 @@ import image1 from '../../../assets/spider.jpg'
 import image2 from '../../../assets/thor.jpg'
 import image3 from '../../../assets/login-btn-1.jpg'
 import image4 from '../../../assets/root.jpg'
+import useTitle from '../../../hooks/useTitle';
 
 const Banner = () => {
+  useTitle("Home-Action Universe")
   return (
     <div className="carousel w-full h-[700px] mt-7">
     <div id="slide1" className="carousel-item relative w-full">

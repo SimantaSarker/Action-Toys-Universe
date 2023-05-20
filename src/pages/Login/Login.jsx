@@ -2,6 +2,8 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import useTitle from "../../hooks/useTitle";
+
 
 const Login = () => {
   const { signIn } = useContext(AuthContext);
@@ -10,6 +12,8 @@ const Login = () => {
   const navigate=useNavigate();
   const location=useLocation();
   const from=location.state?.from?.pathname || "/";
+
+  useTitle("Login")
 
   const handleLogin = (event) => {
     setError("");

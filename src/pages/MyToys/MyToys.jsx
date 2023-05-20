@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import MyToysCard from "./MyToysCard";
+import useTitle from "../../hooks/useTitle";
 
 const MyToys = () => {
   const { user } = useContext(AuthContext);
@@ -8,6 +9,7 @@ const MyToys = () => {
   // const [sorting, setSorting] = useState("");
    const email=user?.email;
    const sortEmail={email};
+   useTitle("MyToys")
 
 
 
