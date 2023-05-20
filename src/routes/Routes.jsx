@@ -1,6 +1,4 @@
-import {
-  createBrowserRouter,
-} from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import Main from "../layouts/Main";
 import Home from "../pages/Home/Home/Home";
 import Blog from "../pages/Blog/Blog";
@@ -18,52 +16,70 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
-    errorElement:<ErrorPage></ErrorPage>,
-    children:[
+    errorElement: <ErrorPage></ErrorPage>,
+    children: [
       {
-        path:"/",
-        element:<Home></Home>,
+        path: "/",
+        element: <Home></Home>,
       },
       {
-        path:"blog",
-        element:<Blog></Blog>
+        path: "blog",
+        element: <Blog></Blog>,
       },
       {
-        path:"allToys",
-        element:<AllToys></AllToys>,
-        
+        path: "allToys",
+        element: <AllToys></AllToys>,
       },
       {
-        path:"myToys",
-        element:<PrivateRoutes><MyToys></MyToys></PrivateRoutes>
+        path: "myToys",
+        element: (
+          <PrivateRoutes>
+            <MyToys></MyToys>
+          </PrivateRoutes>
+        ),
       },
       {
-        path:"addToys",
-        element:<PrivateRoutes><AddToys></AddToys></PrivateRoutes>
+        path: "addToys",
+        element: (
+          <PrivateRoutes>
+            <AddToys></AddToys>
+          </PrivateRoutes>
+        ),
       },
       {
-        path:'login',
-        element:<Login></Login>,
+        path: "login",
+        element: <Login></Login>,
       },
       {
-        path:"register",
-        element:<Register></Register>
+        path: "register",
+        element: <Register></Register>,
       },
       {
-        path:'/update/:id',
-        element:<PrivateRoutes><UpdateMyToys></UpdateMyToys></PrivateRoutes>,
-        loader:({params})=>fetch(`http://localhost:5000/toys/${params.id}`)
-
+        path: "/update/:id",
+        element: (
+          <PrivateRoutes>
+            <UpdateMyToys></UpdateMyToys>
+          </PrivateRoutes>
+        ),
+        loader: ({ params }) =>
+          fetch(
+            `https://assignment-11-server-lilac.vercel.app/toys/${params.id}`
+          ),
       },
       {
-        path:"toys/:id",
-        element:<PrivateRoutes><ToysDetails></ToysDetails></PrivateRoutes>,
-        loader:({params})=>fetch(`http://localhost:5000/toys/${params.id}`)
-      }
-    
-    ]
+        path: "toys/:id",
+        element: (
+          <PrivateRoutes>
+            <ToysDetails></ToysDetails>
+          </PrivateRoutes>
+        ),
+        loader: ({ params }) =>
+          fetch(
+            `https://assignment-11-server-lilac.vercel.app/toys/${params.id}`
+          ),
+      },
+    ],
   },
 ]);
-
 
 export default router;

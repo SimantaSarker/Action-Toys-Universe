@@ -5,7 +5,7 @@ import useTitle from "../../hooks/useTitle";
 
 const AddToys = () => {
   const { user } = useContext(AuthContext);
-  useTitle("AddToys")
+  useTitle("AddToys");
 
   const handleAddToys = (event) => {
     event.preventDefault();
@@ -16,7 +16,7 @@ const AddToys = () => {
     const email = form.email.value;
     const price = form.price.value;
     const rating = form.rating.value;
-    const details=form.details.value;
+    const details = form.details.value;
     const subCategory = form.categories.value;
     const photo = form.photo.value;
     const toy = {
@@ -30,7 +30,7 @@ const AddToys = () => {
       details,
       photo,
     };
-    fetch("http://localhost:5000/toys", {
+    fetch("https://assignment-11-server-lilac.vercel.app/toys", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -39,15 +39,14 @@ const AddToys = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        if(data.insertedId)
-        {
+        if (data.insertedId) {
           Swal.fire({
-            position: 'center',
-            icon: 'success',
-            title: 'Successfully insert data into database',
+            position: "center",
+            icon: "success",
+            title: "Successfully insert data into database",
             showConfirmButton: false,
-            timer: 1500
-          })
+            timer: 1500,
+          });
           form.reset();
         }
       });

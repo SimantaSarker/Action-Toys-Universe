@@ -7,36 +7,30 @@ const MyToys = () => {
   const { user } = useContext(AuthContext);
   const [myToys, setMyToys] = useState([]);
   // const [sorting, setSorting] = useState("");
-   const email=user?.email;
-   const sortEmail={email};
-   useTitle("MyToys")
-
-
-
+  const email = user?.email;
+  const sortEmail = { email };
+  useTitle("MyToys");
 
   useEffect(() => {
-    fetch(`http://localhost:5000/myToys?email=${user?.email}`)
+    fetch(
+      `https://assignment-11-server-lilac.vercel.app/myToys?email=${user?.email}`
+    )
       .then((res) => res.json())
       .then((data) => setMyToys(data));
   }, [user]);
 
-
-
-
-
   const handleSort = (sorting) => {
-    fetch(`http://localhost:5000/sorts/${sorting}`,{
-      method:"POST",
-      headers:{
-        "content-type":"application/json"
+    fetch(`https://assignment-11-server-lilac.vercel.app/sorts/${sorting}`, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
       },
-      body:JSON.stringify(sortEmail)
+      body: JSON.stringify(sortEmail),
     })
-    .then((res)=>res.json()).then((data)=>setMyToys(data))
-
+      .then((res) => res.json())
+      .then((data) => setMyToys(data));
   };
 
-  
   return (
     <div>
       <div className="mx-auto">

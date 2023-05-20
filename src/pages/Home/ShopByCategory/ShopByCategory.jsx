@@ -6,7 +6,9 @@ const ShopByCategory = () => {
   const [TabData, setTabData] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/categories/${activeTab}`)
+    fetch(
+      `https://assignment-11-server-lilac.vercel.app/categories/${activeTab}`
+    )
       .then((res) => res.json())
       .then((data) => setTabData(data));
   }, [activeTab]);
