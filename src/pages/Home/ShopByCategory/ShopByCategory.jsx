@@ -19,7 +19,7 @@ const ShopByCategory = () => {
       <div>
         <h1 className="text-center my-20 text-5xl">Shop By Category</h1>
       </div>
-      <div className="grid md:grid-cols-3 lg:grid-cols-3 w-1/2  mx-auto gap-9 text-2xl ">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 w-[50%]  mx-auto gap-9 text-2xl ">
         <div
           className={`${activeTab === "Marvel" ? " same" : ""}`}
           onClick={() => handleTabControl("Marvel")}

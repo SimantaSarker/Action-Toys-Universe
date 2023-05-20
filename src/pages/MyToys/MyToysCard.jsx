@@ -3,7 +3,7 @@ import { RxUpdate } from "react-icons/rx";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 const MyToysCard = ({toy,myToys,setMyToys}) => {
-  const{email,name,photo,price,quantity,rating,seller,subCategory,_id}=toy;
+  const{email,name,photo,price,quantity,rating,seller,subCategory,_id,details}=toy;
 
 
 
@@ -64,7 +64,7 @@ const MyToysCard = ({toy,myToys,setMyToys}) => {
         <td>{price}</td>
         <td>{rating}</td>
         <td>{quantity}</td>
-        {/* <td className="overflow-hidde">{details}</td> */}
+        <td>{details}</td>
         <td>
               <div className="w-12 h-12  flex items-center">
                 <button

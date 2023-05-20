@@ -26,11 +26,11 @@ const Footer = () => {
         </div>
       </footer>
       <footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
-        <div className="items-center grid-flow-col">
+        <div className="items-center md:flex flex-row">
           <div className="w-24 rounded">
             <img src={logo} className="object-cover" />
           </div>
-          <div className="text-xl">
+          <div className="text-xl flex flex-col">
             <p className="ms-1"> Action Universe </p>
             <div className="md:flex">
               <svg
@@ -72,7 +72,7 @@ const Footer = () => {
               </svg>
               <p className="ms-1">simantasarker0000@gmail.com</p>
             </div>
-            <div className="flex">
+            <div className="md:flex ">
             <FaMobileAlt style={{fontSize:"20px"}}></FaMobileAlt>
             <p>+880-17******** (Available from 10am to 4px)</p>
             </div>

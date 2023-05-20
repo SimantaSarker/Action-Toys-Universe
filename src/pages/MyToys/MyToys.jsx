@@ -70,7 +70,7 @@ const MyToys = () => {
               <th>Price</th>
               <th>Rating</th>
               <th>Quantity</th>
-              {/* <th>Details</th> */}
+              <th>Details</th>
               <th>Action</th>
             </tr>
           </thead>
