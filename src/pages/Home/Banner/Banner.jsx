@@ -5,6 +5,7 @@ import image4 from '../../../assets/root.jpg'
 import useTitle from '../../../hooks/useTitle';
 
 const Banner = () => {
+  //-------------Dynamic Title added---------------
   useTitle("Home-Action Universe")
   return (
     <div className="carousel w-full h-[700px] mt-7">
