@@ -1,0 +1,16 @@
+.same{
+  width: 200px;
+  text-align: center;
+height: 50px;
+  background: #c0c007;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+cursor: pointer;
+-webkit-transition: all 0.2s ease;
+-o-transition: all 0.2s ease;
+transition: all 0.2s ease;
+}
+.same:hover{
+  background: #acbf8f;
+}
