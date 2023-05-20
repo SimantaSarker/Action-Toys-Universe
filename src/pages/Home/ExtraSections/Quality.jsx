@@ -6,8 +6,8 @@ const Quality = () => {
           Made of high quality materials and by highest possible standards
         </h1>
       </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-2 ms-9 gap-20 mt-12">
-        <div className="flex items-center justify-center gap-10">
+      <div className="grid md:grid-cols-2 lg:grid-cols-2 ms-9 gap-20 mt-12" >
+        <div className="flex items-center justify-center gap-10" data-aos="fade-up-right">
           <div>
             <img
               src="https://cdn.shopify.com/s/files/1/1152/4590/files/block_3fd8e71d-ad90-4a82-b3dd-5e014ea255ae_small.png?v=1676308075"
@@ -23,7 +23,7 @@ const Quality = () => {
             </p>
           </div>
         </div>
-        <div className="flex items-center justify-center gap-5">
+        <div className="flex items-center justify-center gap-5" data-aos="fade-up-right">
           <div>
             <img
               src="https://cdn.shopify.com/s/files/1/1152/4590/files/puzzle_1_small.png?v=1676305899"
@@ -37,7 +37,7 @@ const Quality = () => {
             </p>
           </div>
         </div>
-        <div className="flex items-center justify-center gap-5">
+        <div className="flex items-center justify-center gap-5" data-aos="fade-up-right">
           <div>
             <img
               src="https://cdn.shopify.com/s/files/1/1152/4590/files/abc_small.png?v=1676307985"
@@ -51,7 +51,7 @@ const Quality = () => {
             </p>
           </div>
         </div>
-        <div className="flex items-center justify-center gap-5">
+        <div className="flex items-center justify-center gap-5" data-aos="fade-up-right">
           <div>
             <img
               src="https://cdn.shopify.com/s/files/1/1152/4590/files/robot_small.png?v=1676307971"

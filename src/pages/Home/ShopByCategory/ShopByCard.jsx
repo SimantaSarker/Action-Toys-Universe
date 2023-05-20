@@ -9,6 +9,7 @@ const ShopByCard = ({ singleData }) => {
 
 
   const handleAlert=id=>{
+    console.log(id)
    if(!user?.email)
    {
    return  Swal.fire({
@@ -20,7 +21,8 @@ const ShopByCard = ({ singleData }) => {
    }
   }
   return (
-    <div className="card  bg-base-100 shadow-xl mt-12 md:h-[70vh] md:w-96 mx-auto">
+    <div className="card  bg-base-100 shadow-xl mt-12 md:h-[70vh] md:w-96 mx-auto" data-aos="fade-up-right"  data-aos-easing="linear"
+    data-aos-duration="1500">
       <figure className="h-full object-cover">
         <img src={photo} alt="Shoes" className=" h-full w-full" />
       </figure>

@@ -8,7 +8,7 @@ const Client = () => {
     <div className="mt-20 ">
         <div className="divider text-2xl ">Testimonials</div>
     <div className="mb-12 grid md:grid-cols-2 lg:grid-cols-2 w-[90%] mx-auto ">
-      <div className=" md:w-1/2 bg-[#66CCFF] h-[60vh]  rounded flex flex-col items-center justify-center gap-6">
+      <div className=" md:w-1/2 bg-[#66CCFF] h-[60vh]  rounded flex flex-col items-center justify-center gap-6" data-aos="zoom-in-up">
         <h1 className="text-5xl">Client Say s</h1>
       
         <div className="divider">
@@ -20,7 +20,7 @@ const Client = () => {
         </div>
       </div>
 
-      <div className="w-full ">
+      <div className="w-full " data-aos="zoom-in-up">
         <div className="carousel w-full h-[60vh]">
           <div id="slide11" className="carousel-item relative w-full">
             <div className="card card-compact w-full bg-base-100 shadow-xl items-center justify-center">

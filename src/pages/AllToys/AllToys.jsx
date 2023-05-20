@@ -39,7 +39,7 @@ const handleToyNameSearch=()=>{
        
       </tr>
     </thead>
-    <tbody>
+    <tbody >
     {
       allToys.map((toy)=>(<AllToysRow key={toy._id} toy={toy}></AllToysRow>))
     }

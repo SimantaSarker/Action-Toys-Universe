@@ -39,7 +39,7 @@ const UpdateMyToys = () => {
 
   return (
     <form className="home" onSubmit={handleUpdate}>
-      <div className="md:flex md:gap-3 mt-10">
+      <div className="md:flex md:gap-3 mt-10" >
         <div className="form-control md:w-1/2">
           <label className="label">
             <span className="label-text"> Name:</span>
@@ -54,7 +54,7 @@ const UpdateMyToys = () => {
             />
           </label>
         </div>
-        <div className="form-control md:w-1/2">
+        <div className="form-control md:w-1/2" >
           <label className="label">
             <span className="label-text"> Quantity:</span>
           </label>
@@ -71,7 +71,7 @@ const UpdateMyToys = () => {
       </div>
 
       {/* form row with supplier and taste  */}
-      <div className="md:flex md:gap-3">
+      <div className="md:flex md:gap-3" >
         <div className="form-control md:w-1/2">
           <label className="label">
             <span className="label-text">Seller:</span>
@@ -102,7 +102,7 @@ const UpdateMyToys = () => {
         </div>
       </div>
 
-      <div className="md:flex md:gap-3 mt-10">
+      <div className="md:flex md:gap-3 mt-10" >
         <div className="form-control md:w-1/2">
           <label className="label">
             <span className="label-text"> Price:</span>
