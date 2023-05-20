@@ -5,13 +5,15 @@ import MyToysCard from "./MyToysCard";
 const MyToys = () => {
   const { user } = useContext(AuthContext);
   const [myToys, setMyToys] = useState([]);
-  const [sorting, setSorting] = useState("1");
+  // const [sorting, setSorting] = useState("");
    const email=user?.email;
    const sortEmail={email};
 
 
+
+
   useEffect(() => {
-    fetch(`  http://localhost:5000/myToys?email=${user?.email}`)
+    fetch(`http://localhost:5000/myToys?email=${user?.email}`)
       .then((res) => res.json())
       .then((data) => setMyToys(data));
   }, [user]);
@@ -20,9 +22,7 @@ const MyToys = () => {
 
 
 
-
-
-  const handleSort = () => {
+  const handleSort = (sorting) => {
     fetch(`http://localhost:5000/sorts/${sorting}`,{
       method:"POST",
       headers:{
@@ -39,19 +39,19 @@ const MyToys = () => {
     <div>
       <div className="mx-auto">
         <button
-          className="btn btn-circle btn-outline"
+          className="btn "
           onClick={() => {
-            setSorting("1");
-            handleSort();
+            // setSorting("-1");
+            handleSort("-1");
           }}
         >
           ASC
         </button>
         <button
-          className="btn btn-circle btn-outline"
+          className="btn "
           onClick={() => {
-            setSorting("-1");
-            handleSort();
+            // setSorting("1");
+            handleSort("1");
           }}
         >
           DSC
