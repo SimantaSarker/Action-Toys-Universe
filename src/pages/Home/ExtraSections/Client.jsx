@@ -35,12 +35,7 @@ const Client = () => {
                 <div className="card-body items-center justify-center w-[70%]">
                   <h2 className="card-title">Mical Ford</h2>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Incidunt facere temporibus quidem aut dolores corrupti
-                    officia quisquam dolor aliquam? Soluta labore commodi
-                    tempora, suscipit aperiam quod nihil voluptas accusamus?
-                    Deserunt, corrupti. Qui esse consectetur odit odio, nulla
-                    deleniti modi voluptate!
+                  This store s selection is out of this world. Clearly they live and love what they do. I went for kites and was blown away by the selection. The rest of the store was a sight to see, between high quality toys, and just-to-look-at large models suspended above. I will be back!
                   </p>
                 </div>
               </div>
@@ -64,12 +59,7 @@ const Client = () => {
                 <div className="card-body items-center justify-center w-[70%]">
                   <h2 className="card-title">Mical Ford</h2>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Incidunt facere temporibus quidem aut dolores corrupti
-                    officia quisquam dolor aliquam? Soluta labore commodi
-                    tempora, suscipit aperiam quod nihil voluptas accusamus?
-                    Deserunt, corrupti. Qui esse consectetur odit odio, nulla
-                    deleniti modi voluptate!
+                  This store s selection is out of this world. Clearly they live and love what they do. I went for kites and was blown away by the selection. The rest of the store was a sight to see, between high quality toys, and just-to-look-at large models suspended above. I will be back!
                   </p>
                 </div>
               </div>
@@ -92,12 +82,7 @@ const Client = () => {
                 <div className="card-body items-center justify-center w-[70%]">
                   <h2 className="card-title">Mical Ford</h2>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Incidunt facere temporibus quidem aut dolores corrupti
-                    officia quisquam dolor aliquam? Soluta labore commodi
-                    tempora, suscipit aperiam quod nihil voluptas accusamus?
-                    Deserunt, corrupti. Qui esse consectetur odit odio, nulla
-                    deleniti modi voluptate!
+                  This store s selection is out of this world. Clearly they live and love what they do. I went for kites and was blown away by the selection. The rest of the store was a sight to see, between high quality toys, and just-to-look-at large models suspended above. I will be back!
                   </p>
                 </div>
               </div>
@@ -120,12 +105,7 @@ const Client = () => {
                 <div className="card-body items-center justify-center w-[70%]">
                   <h2 className="card-title">Mical Ford</h2>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Incidunt facere temporibus quidem aut dolores corrupti
-                    officia quisquam dolor aliquam? Soluta labore commodi
-                    tempora, suscipit aperiam quod nihil voluptas accusamus?
-                    Deserunt, corrupti. Qui esse consectetur odit odio, nulla
-                    deleniti modi voluptate!
+                  This store s selection is out of this world. Clearly they live and love what they do. I went for kites and was blown away by the selection. The rest of the store was a sight to see, between high quality toys, and just-to-look-at large models suspended above. I will be back!
                   </p>
                 </div>
               </div>
