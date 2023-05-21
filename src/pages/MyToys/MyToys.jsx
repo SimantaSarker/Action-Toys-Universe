@@ -6,7 +6,6 @@ import useTitle from "../../hooks/useTitle";
 const MyToys = () => {
   const { user } = useContext(AuthContext);
   const [myToys, setMyToys] = useState([]);
-  // const [sorting, setSorting] = useState("");
   const email = user?.email;
   const sortEmail = { email };
   useTitle("Action Universe | MyToys");
